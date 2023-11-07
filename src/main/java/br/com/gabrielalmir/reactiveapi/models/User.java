@@ -1,0 +1,13 @@
+package br.com.gabrielalmir.reactiveapi.models;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Table(name="users")
+public record User(
+    @Id
+    Long id,
+    String username,
+    String password,
+    String email
+) {}
